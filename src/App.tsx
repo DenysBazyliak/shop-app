@@ -1,20 +1,29 @@
-import './App.css'
-import {createBrowserRouter, createRoutesFromElements, Route, RouterProvider} from "react-router-dom";
-import {RootLayout} from "./components/RootLayout.tsx";
-import {Homepage} from "./components/Homepage/Homepage.tsx"
+import {
+  createBrowserRouter,
+  createRoutesFromElements,
+  Route,
+  RouterProvider,
+} from "react-router-dom";
 
-const router = createBrowserRouter(createRoutesFromElements(
-    <Route path={'/'} element={<RootLayout/>}>
-        <Route index element={<Homepage/>}></Route>
+import { RootLayout } from "./components/RootLayout/RootLayout.tsx";
+import { Homepage } from "./components/Homepage/Homepage.tsx";
+
+import "./App.css";
+
+const router = createBrowserRouter(
+  createRoutesFromElements(
+    <Route path={"/"} element={<RootLayout />}>
+      <Route index element={<Homepage />}></Route>
     </Route>
-))
+  )
+);
 
 function App() {
-    return (
-        <div>
-            <RouterProvider router={router}/>
-        </div>
-    )
+  return (
+    <div className={"app"}>
+      <RouterProvider router={router} />
+    </div>
+  );
 }
 
-export default App
+export default App;

@@ -1,0 +1,11 @@
+.selectedProduct {
+    color: #a41c1c;
+}
+.tr{
+    display: flex;
+    justify-content: space-between;
+}
+.wrapper{
+    width: 100vw;
+    height: 100vh;
+}

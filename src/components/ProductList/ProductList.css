@@ -1,0 +1,22 @@
+.main{
+    grid-area: main;
+
+}
+.selected{
+position: absolute;
+    top: 160px;
+    left: 440px;
+
+}
+.dimmingDiv{
+    width: 100vw;
+    height: 100vh;
+    background: black;
+    opacity: 0.1;
+}
+.wrapper{
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: row;
+    flex-wrap:wrap;
+}

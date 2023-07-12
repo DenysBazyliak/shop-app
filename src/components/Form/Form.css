@@ -1,0 +1,62 @@
+.formWrapper {
+    display: grid;
+    height: 100%;
+    grid-template:
+                "img productWidth" 50px
+                "name productHeight" 50px
+                "count buttons" 50px
+                "productWeight buttons" 50px/ 1fr 1fr;
+    gap: 20px;
+    background-color: #2196F3;
+    padding: 10px;
+}
+
+h5 {
+    text-align: center;
+}
+
+.image {
+    grid-area: img;
+}
+
+.name {
+    grid-area: name;
+
+}
+
+.count {
+    grid-area: count;
+
+}
+
+.productWeight {
+    grid-area: productWeight;
+
+}
+
+.productWidth {
+    grid-area: productWidth;
+}
+
+.productHeight {
+    grid-area: productHeight;
+}
+
+.cancelButton {
+    grid-area: buttons;
+}
+
+.submitButton {
+    grid-area: buttons;
+}
+.buttons{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.formWrapper input{
+    background-color: rgba(255, 255, 255, 0.8);
+    text-align: center;
+    margin:  5px;
+    padding: 20px 0;
+}
