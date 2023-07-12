@@ -49,18 +49,20 @@ export const FormComponent = () => {
 
   return (
     <Card
+      className={"card"}
       sx={{
         position: "fixed",
-        top: "50px",
+        top: "70px",
         left: "200px",
         width: "800px",
         height: "400px",
         margin: "20px 30px 20px 50px",
-        backgroundColor: "#0b2031",
-        border: "solid 3px black",
+        backgroundColor: "#ffffff",
+        border: "solid 1px #d7d1d1",
+        zIndex: "3",
       }}
     >
-      <h5>Product Form</h5>
+      <h4 className={"h4"}>Product Form</h4>
       <div>
         <Formik
           initialValues={initialValues}
@@ -112,14 +114,12 @@ export const FormComponent = () => {
               >
                 Confirm
               </Button>
-              <Button
-                className={"cancelButton"}
-                variant={"contained"}
-                color={"error"}
+              <button
+                className={"declineButton"}
                 onClick={() => dispatch(setForm(false))}
               >
-                Decline
-              </Button>
+                DECLINE
+              </button>
             </div>
           </Form>
         </Formik>

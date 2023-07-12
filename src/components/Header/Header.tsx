@@ -8,22 +8,32 @@ export const Header = () => {
   const dispatch = useAppDispatch();
 
   return (
-    <div className={"header"}>
-      <Box sx={{ flexGrow: 1 }}>
-        <Box sx={{ width: "100%", display: "flex", justifyContent: "center" }}>
-          <Typography variant={"h4"}>shop-app</Typography>
-        </Box>
-        <div className="linkWrapper">
-          <Button
-            variant={"contained"}
-            onClick={() => {
-              return dispatch(setForm(true));
-            }}
-          >
-            Add Product
-          </Button>
-        </div>
-      </Box>
-    </div>
+    <Box
+      sx={{
+        height: "50px",
+        width: "100%",
+        position: "sticky",
+        top: "0",
+        display: "flex",
+        justifyContent: "space-between",
+        gridArea: "header",
+        zIndex: "2",
+        borderBottom: "solid #d7d1d1 1px",
+        marginBottom: "10px",
+        paddingBottom: "10px",
+        paddingTop: "20px",
+        backgroundColor: "white",
+      }}
+    >
+      <Typography variant={"h4"}>shop-app</Typography>
+      <Button
+        variant={"contained"}
+        onClick={() => {
+          return dispatch(setForm(true));
+        }}
+      >
+        Add Product
+      </Button>
+    </Box>
   );
 };

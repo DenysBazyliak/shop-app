@@ -2,17 +2,20 @@
     display: grid;
     height: 100%;
     grid-template:
-                "img productWidth" 50px
-                "name productHeight" 50px
-                "count buttons" 50px
+                "img ." 50px
+                "name productWidth" 50px
+                "count productHeight" 50px
                 "productWeight buttons" 50px/ 1fr 1fr;
+
     gap: 20px;
-    background-color: #2196F3;
+    background-color: #ffffff;
     padding: 10px;
 }
 
-h5 {
-    text-align: center;
+.h4 {
+    width: 15%;
+    margin-left: 20px;
+    border-bottom: solid #a893b4 1px ;
 }
 
 .image {
@@ -42,21 +45,72 @@ h5 {
     grid-area: productHeight;
 }
 
-.cancelButton {
+.buttons{
     grid-area: buttons;
+    display: flex;
+    gap: 30px;
+    justify-content:flex-start;
+    align-items: center;
+}
+.declineButton {
+    height: 38px;
+    width: 100px;
+    color: black;
+    background-color: #b7bcbb;
+    border: solid snow 1px;
+    border-radius: 5px;
+
+    align-items: center;
+    box-shadow: rgba(0, 0, 0, 0.02) 0 1px 3px 0;
+    box-sizing: border-box;
+    color: rgba(0, 0, 0, 0.85);
+    cursor: pointer;
+    display: inline-flex;
+    font-family: system-ui,-apple-system,system-ui,"Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+    justify-content: center;
+    line-height: 1.25;
+    margin: 0;
+    min-height: 3rem;
+    padding: calc(.875rem - 1px) calc(1.5rem - 1px);
+    position: relative;
+    text-decoration: none;
+    transition: all 250ms;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    vertical-align: baseline;
 }
 
 .submitButton {
-    grid-area: buttons;
+    height: 47px;
 }
-.buttons{
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-}
+
+
 .formWrapper input{
     background-color: rgba(255, 255, 255, 0.8);
-    text-align: center;
+    text-align: left;
+    border: solid #b7bcbb 1px;
+    border-radius: 5px;
     margin:  5px;
-    padding: 20px 0;
+    padding-left: 20px;
+}
+.declineButton:hover,
+.declineButton:focus {
+    border-color: rgba(0, 0, 0, 0.15);
+    box-shadow: rgba(0, 0, 0, 0.1) 0 4px 12px;
+    color: rgba(0, 0, 0, 0.65);
+}
+
+.declineButton:hover {
+    transform: translateY(-1px);
+}
+
+.declineButton:active {
+    background-color: #F0F0F1;
+    border-color: rgba(0, 0, 0, 0.15);
+    box-shadow: rgba(0, 0, 0, 0.06) 0 2px 4px;
+    color: rgba(0, 0, 0, 0.65);
+    transform: translateY(0);
 }

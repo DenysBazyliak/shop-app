@@ -29,7 +29,7 @@ export const Product: React.FC<ProductProps> = (props) => {
     <div className={"product"}>
       <Card
         sx={{
-          maxWidth: 330,
+          width: 330,
           margin: "20px 30px 20px 50px",
           backgroundColor: " #795d5d",
         }}
